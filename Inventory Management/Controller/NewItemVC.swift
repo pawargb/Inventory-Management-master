@@ -39,6 +39,8 @@ class NewItemVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dueDatePickerView.minimumDate = Date()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         view.addGestureRecognizer(tapGesture)
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
